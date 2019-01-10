@@ -1,0 +1,34 @@
+Installation of R and RStudio on Ubuntu Linux:
+
+OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version. Please read the documents on OpenBLAS wiki.
+Ref : http://www.openblas.net/
+
+1. I have installed R with OpenBLAS as it will optimizes some operations.
+   I have used following steps:
+
+2. First we install R with openBLAS
+   $ sudo apt-get install libopenblas-base r-base
+
+3. Now Let's install RStudio:
+   First Install gdebi
+   $ sudo apt-get install gdebi
+
+4. Let's download the debian file in the current directory
+   $ wget https://download1.rstudio.org/rstudio-xenial-1.1.419-amd64.deb
+
+5. Now install the package
+   $ sudo gdebi rstudio-xenial-1.1.379-amd64.deb
+
+Using RStudio:
+Now to install packages go to RStudio and in the console at bottom left type following commands:
+6. install.packages("Package name")
+   e.g. install.packages("tidyverse"), install.packages("XML")
+
+7. Now install ggplot2 using install.packages("ggplot2")
+
+8. Check whether R is running fine by running following script:
+   -library(ggplot2)
+   -ggplot(airquality, aes(x = Day, y = Ozone)) + geom_point()
+
+9. Select the text and use ctrl+enter(or cmd+enter on Mac)
+   - You will see a graph like the one given in images folder
